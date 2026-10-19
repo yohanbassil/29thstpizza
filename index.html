@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>29th St. Pizza, Subs &amp; More | Altoona, PA</title>
+<meta name="description" content="Pizza, subs and more at 2900 5th Ave in Altoona, PA. Call 814-942-7130 to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #c8281e;
+    --red-dark: #9e1d15;
+    --cream: #fff8ec;
+    --ink: #221a16;
+    --muted: #6b5e57;
+    --line: #ecdcc4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; background: var(--cream); color: var(--ink); line-height: 1.55; }
+  h1, h2, h3 { font-family: Oswald, Impact, sans-serif; text-transform: uppercase; letter-spacing: .02em; line-height: 1.1; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  .demo-note { background: #ffe9a8; color: #5a4300; text-align: center; font-size: .85rem; padding: 6px 16px; }
+
+  header { background: var(--ink); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .logo { font-family: Oswald, sans-serif; font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+  .logo span { color: #ffb4ad; }
+  nav a { text-decoration: none; margin-left: 20px; font-weight: 600; font-size: .95rem; opacity: .85; }
+  nav a:hover { opacity: 1; }
+  @media (max-width: 640px) { nav a:not(.btn) { display: none; } }
+
+  .btn { display: inline-block; background: var(--red); color: #fff; text-decoration: none; font-weight: 600;
+         padding: 12px 22px; border-radius: 999px; transition: background .15s; }
+  .btn:hover { background: var(--red-dark); }
+  .btn.ghost { background: transparent; border: 2px solid #fff; }
+  header .btn { padding: 8px 16px; margin-left: 20px; }
+
+  .hero { background: radial-gradient(circle at 80% 20%, #e8463a 0, var(--red) 40%, var(--red-dark) 100%); color: #fff; padding: 88px 0 96px; }
+  .hero h1 { font-size: clamp(2.6rem, 8vw, 5rem); max-width: 12ch; }
+  .hero p { font-size: 1.15rem; max-width: 34rem; margin: 18px 0 30px; opacity: .95; }
+  .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .strip { background: #fff; border-bottom: 1px solid var(--line); }
+  .strip .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 22px 20px; text-align: center; }
+  .strip b { display: block; font-family: Oswald, sans-serif; text-transform: uppercase; color: var(--red); }
+  @media (max-width: 640px) { .strip .wrap { grid-template-columns: 1fr; } }
+
+  section { padding: 72px 0; }
+  section h2 { font-size: 2.2rem; margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 32px; }
+
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+  .card h3 { color: var(--red); font-size: 1.4rem; margin-bottom: 14px; }
+  .item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .item:last-child { border-bottom: 0; }
+  .item small { display: block; color: var(--muted); }
+  .price { font-weight: 600; white-space: nowrap; }
+
+  .visit { background: var(--ink); color: #fff; }
+  .visit .sub { color: #cbbdb4; }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  @media (max-width: 760px) { .visit-grid { grid-template-columns: 1fr; } }
+  .hours { width: 100%; border-collapse: collapse; }
+  .hours td { padding: 9px 0; border-bottom: 1px solid #3a302b; }
+  .hours td:last-child { text-align: right; }
+  .closed { color: #ff8f86; }
+  .map { border: 0; width: 100%; height: 300px; border-radius: 14px; }
+  .contact p { margin-bottom: 12px; }
+
+  footer { text-align: center; padding: 28px 20px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="demo-note">Demo preview. Menu items and prices are placeholders until confirmed with the owner.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">29th St. <span>Pizza</span></a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Hours &amp; Location</a>
+      <a class="btn" href="tel:+18149427130">Call to Order</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Pizza, Subs &amp; More</h1>
+    <p>Hot, fresh and made to order on 5th Avenue in Altoona. Call ahead and it'll be ready when you get here.</p>
+    <div class="actions">
+      <a class="btn ghost" href="tel:+18149427130">Call 814-942-7130</a>
+      <a class="btn ghost" href="#menu">See the Menu</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>Pickup</b>Call ahead, skip the wait</div>
+    <div><b>Open Tue–Sat</b>10 AM to 7 PM</div>
+    <div><b>Local</b>2900 5th Ave, Altoona</div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>Menu</h2>
+    <p class="sub">Call 814-942-7130 to place an order.</p>
+    <div class="menu-grid">
+      <div class="card">
+        <h3>Pizza</h3>
+        <div class="item"><div>Cheese Pizza<small>Small / Large</small></div><span class="price">$9.99 / $14.99</span></div>
+        <div class="item"><div>Pepperoni Pizza<small>Small / Large</small></div><span class="price">$10.99 / $16.49</span></div>
+        <div class="item"><div>Supreme<small>Pepperoni, sausage, peppers, onions, mushrooms</small></div><span class="price">$18.99</span></div>
+        <div class="item"><div>Extra Toppings<small>Each</small></div><span class="price">$1.50</span></div>
+      </div>
+      <div class="card">
+        <h3>Subs</h3>
+        <div class="item"><div>Italian Sub<small>Ham, salami, capicola, provolone</small></div><span class="price">$9.49</span></div>
+        <div class="item"><div>Steak &amp; Cheese<small>Onions, peppers, mushrooms</small></div><span class="price">$10.49</span></div>
+        <div class="item"><div>Chicken Cheesesteak</div><span class="price">$10.49</span></div>
+        <div class="item"><div>Meatball Sub<small>Marinara, mozzarella</small></div><span class="price">$8.99</span></div>
+      </div>
+      <div class="card">
+        <h3>&amp; More</h3>
+        <div class="item"><div>Wings<small>8 pc, choice of sauce</small></div><span class="price">$11.99</span></div>
+        <div class="item"><div>French Fries</div><span class="price">$3.99</span></div>
+        <div class="item"><div>Mozzarella Sticks</div><span class="price">$7.49</span></div>
+        <div class="item"><div>Garden Salad</div><span class="price">$6.99</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <h2>Hours &amp; Location</h2>
+    <p class="sub">2900 5th Ave, Altoona, PA 16602</p>
+    <div class="visit-grid">
+      <div class="contact">
+        <table class="hours">
+          <tr><td>Monday</td><td class="closed">Closed</td></tr>
+          <tr><td>Tuesday</td><td>10 AM – 7 PM</td></tr>
+          <tr><td>Wednesday</td><td>10 AM – 7 PM</td></tr>
+          <tr><td>Thursday</td><td>10 AM – 7 PM</td></tr>
+          <tr><td>Friday</td><td>10 AM – 7 PM</td></tr>
+          <tr><td>Saturday</td><td>10 AM – 7 PM</td></tr>
+          <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+        </table>
+        <p style="margin-top:24px"><a class="btn" href="tel:+18149427130">Call 814-942-7130</a></p>
+        <p><a href="https://www.facebook.com/29thstreetpizzasubs/">Follow us on Facebook</a></p>
+      </div>
+      <iframe class="map" loading="lazy" title="Map to 29th St. Pizza"
+        src="https://www.google.com/maps?q=2900+5th+Ave,+Altoona,+PA+16602&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 29th St. Pizza, Subs &amp; More · Altoona, PA</footer>
+</body>
+</html>
