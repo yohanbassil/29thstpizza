@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bubs Lawncare &amp; Landscaping | Lawn Care in Altoona, PA</title>
+<meta name="description" content="Lawn mowing, fertilizing, stump removal and landscaping in Altoona, PA. Call Bubs Lawncare & Landscaping at 814-207-7353.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LandscapingBusiness",
+ "name": "Bubs Lawncare & Landscaping",
+ "telephone": "+1-814-207-7353",
+ "address": {"@type": "PostalAddress", "streetAddress": "2916 Broad Ave", "addressLocality": "Altoona", "addressRegion": "PA", "postalCode": "16601", "addressCountry": "US"},
+ "areaServed": ["Altoona, PA", "Blair County, PA"],
+ "sameAs": ["https://www.facebook.com/BubsLawncareAndLandscaping"],
+ "makesOffer": [
+  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lawn Mowing"}},
+  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lawn Fertilizing"}},
+  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stump Removal"}},
+  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping"}}
+ ]
+}
+</script>
+<style>
+  :root {
+    --green: #2f6b2f;
+    --green-dark: #1f4d22;
+    --lime: #9bd14b;
+    --bg: #f6f8f2;
+    --ink: #1d2a1c;
+    --muted: #5a6b58;
+    --line: #dde6d4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  h1, h2, h3 { font-family: "Archivo Black", Impact, sans-serif; line-height: 1.1; }
+  a { color: inherit; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+  .demo-note { background: #ffe9a8; color: #5a4300; text-align: center; font-size: .85rem; padding: 6px 16px; }
+
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-family: "Archivo Black", sans-serif; font-size: 1.3rem; text-decoration: none; color: var(--green-dark); }
+  .logo span { color: var(--green); font-family: Inter, sans-serif; font-weight: 600; font-size: .95rem; margin-left: 6px; }
+  nav a { text-decoration: none; margin-left: 22px; font-weight: 600; font-size: .95rem; color: var(--muted); }
+  nav a:hover { color: var(--ink); }
+  @media (max-width: 680px) { nav a:not(.btn) { display: none; } .logo span { display: none; } }
+
+  .btn { display: inline-block; background: var(--green); color: #fff !important; text-decoration: none; font-weight: 600;
+         padding: 13px 24px; border-radius: 999px; transition: background .15s; }
+  .btn:hover { background: var(--green-dark); }
+  .btn.light { background: #fff; color: var(--green-dark) !important; }
+  header .btn { padding: 9px 18px; }
+
+  .hero { background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 70%, #4b8f36 100%); color: #fff; padding: 90px 0 110px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 60px;
+                 background: var(--bg); clip-path: polygon(0 100%, 100% 100%, 100% 20%, 75% 70%, 50% 30%, 25% 75%, 0 25%); }
+  .tag { display: inline-block; background: rgba(255,255,255,.15); padding: 5px 14px; border-radius: 999px; font-size: .9rem; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2.4rem, 7vw, 4.4rem); max-width: 15ch; }
+  .hero h1 em { font-style: normal; color: var(--lime); }
+  .hero p { font-size: 1.15rem; max-width: 34rem; margin: 18px 0 30px; color: #dcebd5; }
+  .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  section { padding: 72px 0; }
+  section h2 { font-size: 2.1rem; margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 34px; max-width: 40rem; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 26px; }
+  .card .dot { width: 42px; height: 42px; border-radius: 50%; background: #e7f3d8; display: grid; place-items: center; margin-bottom: 14px; font-size: 1.3rem; }
+  .card h3 { font-size: 1.2rem; margin-bottom: 6px; }
+  .card p { color: var(--muted); }
+
+  .steps { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .steps ol { list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
+  .steps li { counter-increment: s; }
+  .steps li::before { content: counter(s); display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+                      background: var(--green); color: #fff; font-weight: 700; margin-bottom: 10px; }
+  .steps b { display: block; margin-bottom: 4px; }
+
+  .faq details { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; margin-bottom: 12px; }
+  .faq summary { font-weight: 600; cursor: pointer; }
+  .faq details p { color: var(--muted); margin-top: 10px; }
+
+  .cta { background: var(--green-dark); color: #fff; text-align: center; }
+  .cta .sub { color: #c5dcbc; margin: 10px auto 28px; }
+  .cta .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; text-align: left; }
+  .info div { background: rgba(255,255,255,.07); border-radius: 10px; padding: 18px; }
+  .info b { display: block; color: var(--lime); }
+
+  footer { text-align: center; padding: 26px 20px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="demo-note">Demo preview. Services, photos and pricing to be confirmed with the owner.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Bubs<span>Lawncare &amp; Landscaping</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="tel:+18142077353">Call Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Locally owned in Altoona, PA</span>
+    <h1>A yard you're <em>proud</em> of, without the work.</h1>
+    <p>Mowing, fertilizing, stump removal and landscaping from a local crew with over two decades of combined experience.</p>
+    <div class="actions">
+      <a class="btn light" href="tel:+18142077353">Call 814-207-7353</a>
+      <a class="btn" style="border:2px solid rgba(255,255,255,.5)" href="#services">See Services</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Services</h2>
+    <p class="sub">Everything your lawn and yard need, handled by one dependable local crew.</p>
+    <div class="grid">
+      <div class="card"><div class="dot">🌱</div><h3>Lawn Mowing</h3><p>Weekly or every-other-week cuts with clean edges and clippings blown off walks and driveways.</p></div>
+      <div class="card"><div class="dot">💧</div><h3>Fertilizing</h3><p>Seasonal treatments that keep your grass thick, green and healthy.</p></div>
+      <div class="card"><div class="dot">🪵</div><h3>Stump Removal</h3><p>Old stumps ground down and cleared so you get your yard back.</p></div>
+      <div class="card"><div class="dot">🌳</div><h3>Landscaping</h3><p>Mulch, beds, plantings and cleanups that make your property stand out.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="steps">
+  <div class="wrap">
+    <h2>How It Works</h2>
+    <p class="sub">Getting started takes one phone call.</p>
+    <ol>
+      <li><b>Call or message us</b>Tell us what your yard needs.</li>
+      <li><b>Get your quote</b>We'll give you a clear price up front.</li>
+      <li><b>We get to work</b>Show up on schedule, do the job right, and clean up after.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="wrap">
+    <h2>Common Questions</h2>
+    <p class="sub">Answers for Altoona homeowners.</p>
+    <details><summary>What areas do you serve?</summary><p>Bubs Lawncare &amp; Landscaping is based at 2916 Broad Ave in Altoona and serves Altoona and nearby Blair County neighborhoods.</p></details>
+    <details><summary>How do I get a price for lawn care?</summary><p>Call 814-207-7353 or message us on Facebook with your address and what you need, and we'll give you a quote.</p></details>
+    <details><summary>Do you remove tree stumps?</summary><p>Yes. We handle stump removal along with mowing, fertilizing and landscaping.</p></details>
+    <details><summary>Can I set up regular mowing?</summary><p>Yes. Ask about a recurring mowing schedule when you call, and we'll put you on the route.</p></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready for a better-looking yard?</h2>
+    <p class="sub">Call today and get on the schedule.</p>
+    <div class="actions">
+      <a class="btn light" href="tel:+18142077353">Call 814-207-7353</a>
+      <a class="btn" style="border:2px solid rgba(255,255,255,.5)" href="https://www.facebook.com/BubsLawncareAndLandscaping">Message Us on Facebook</a>
+    </div>
+    <div class="info">
+      <div><b>Phone</b><a href="tel:+18142077353">814-207-7353</a><br><a href="tel:+18146868584">814-686-8584</a></div>
+      <div><b>Location</b>2916 Broad Ave<br>Altoona, PA 16601</div>
+      <div><b>Service Area</b>Altoona and Blair County</div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Bubs Lawncare &amp; Landscaping · Altoona, PA</footer>
+</body>
+</html>
