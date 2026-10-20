@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Great Valley Grill &amp; Pizza | Malvern, PA</title>
+<meta name="description" content="New York style, Sicilian, Chicago deep dish and stuffed pizza at 79 Lancaster Ave in Malvern, PA. Call 484-320-8211 to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1f5b3a;
+    --green-dark: #143f28;
+    --tomato: #d8452b;
+    --tomato-dark: #b23420;
+    --cream: #fbf7ef;
+    --ink: #1c1f1a;
+    --muted: #5f655c;
+    --line: #e4dccb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; background: var(--cream); color: var(--ink); line-height: 1.55; }
+  h1, h2, h3 { font-family: Oswald, Impact, sans-serif; text-transform: uppercase; letter-spacing: .02em; line-height: 1.1; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  .demo-note { background: #ffe9a8; color: #5a4300; text-align: center; font-size: .85rem; padding: 6px 16px; }
+
+  header { background: var(--green-dark); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .logo { font-family: Oswald, sans-serif; font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+  .logo span { color: #ffb19f; }
+  nav a { text-decoration: none; margin-left: 20px; font-weight: 600; font-size: .95rem; opacity: .85; }
+  nav a:hover { opacity: 1; }
+  @media (max-width: 640px) { nav a:not(.btn) { display: none; } .logo .long { display: none; } }
+  nav .btn { white-space: nowrap; }
+
+  .btn { display: inline-block; background: var(--tomato); color: #fff; text-decoration: none; font-weight: 600;
+         padding: 12px 22px; border-radius: 999px; transition: background .15s; }
+  .btn:hover { background: var(--tomato-dark); }
+  .btn.ghost { background: transparent; border: 2px solid #fff; }
+  .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  header .btn { padding: 8px 16px; margin-left: 20px; }
+
+  .hero { background: radial-gradient(circle at 85% 15%, #2f7a50 0, var(--green) 45%, var(--green-dark) 100%); color: #fff; padding: 88px 0 96px; }
+  .hero .eyebrow { font-family: Oswald, sans-serif; text-transform: uppercase; letter-spacing: .12em; color: #ffb19f; margin-bottom: 12px; }
+  .hero h1 { font-size: clamp(2.6rem, 8vw, 5rem); max-width: 13ch; }
+  .hero p { font-size: 1.15rem; max-width: 36rem; margin: 18px 0 30px; opacity: .95; }
+  .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero .actions .btn:not(.ghost) { background: var(--tomato); }
+
+  .strip { background: #fff; border-bottom: 1px solid var(--line); }
+  .strip .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 22px 20px; text-align: center; }
+  .strip b { display: block; font-family: Oswald, sans-serif; text-transform: uppercase; color: var(--tomato); }
+  @media (max-width: 640px) { .strip .wrap { grid-template-columns: 1fr; } }
+
+  section { padding: 72px 0; }
+  section h2 { font-size: 2.2rem; margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 32px; }
+
+  .styles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .style { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px; border-top: 5px solid var(--tomato); }
+  .style h3 { font-size: 1.25rem; color: var(--green); margin-bottom: 6px; }
+  .style p { color: var(--muted); font-size: .95rem; }
+
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+  .card h3 { color: var(--tomato); font-size: 1.4rem; margin-bottom: 14px; }
+  .item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .item:last-child { border-bottom: 0; }
+  .item small { display: block; color: var(--muted); }
+  .price { font-weight: 600; white-space: nowrap; }
+
+  .order { background: var(--tomato); color: #fff; text-align: center; }
+  .order h2 { font-size: 2.4rem; }
+  .order p { max-width: 34rem; margin: 10px auto 26px; opacity: .95; }
+  .order .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .order .btn { background: #fff; color: var(--tomato-dark); }
+  .order .btn:hover { background: #ffe6df; }
+  .order .btn.ghost { background: transparent; color: #fff; }
+
+  .visit { background: var(--ink); color: #fff; }
+  .visit .sub { color: #c4c9bf; }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  @media (max-width: 760px) { .visit-grid { grid-template-columns: 1fr; } }
+  .hours { width: 100%; border-collapse: collapse; }
+  .hours td { padding: 9px 0; border-bottom: 1px solid #33382f; }
+  .hours td:last-child { text-align: right; }
+  .map { border: 0; width: 100%; height: 300px; border-radius: 14px; }
+  .contact p { margin-bottom: 12px; }
+
+  footer { text-align: center; padding: 28px 20px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="demo-note">Demo preview. Menu items, prices and hours are placeholders until confirmed with the owner.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Great Valley <span><span class="long">Grill &amp; </span>Pizza</span></a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Hours &amp; Location</a>
+      <a class="btn" href="tel:+14843208211">Call to Order</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Lancaster Ave · Malvern, PA</div>
+    <h1>Every Style of Pizza, Done Right</h1>
+    <p>New York thin, Sicilian, Chicago deep dish and stuffed pies, plus cheesesteaks, wings and more from the grill. Call ahead for pickup or order online for delivery.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+14843208211">Call 484-320-8211</a>
+      <a class="btn ghost" href="#menu">See the Menu</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>Pickup &amp; Delivery</b>Call ahead or order online</div>
+    <div><b>Open Daily</b>From 11 AM</div>
+    <div><b>Local</b>79 Lancaster Ave, Malvern</div>
+  </div>
+</div>
+
+<section id="styles">
+  <div class="wrap">
+    <h2>Pick Your Pie</h2>
+    <p class="sub">Four styles, all made to order.</p>
+    <div class="styles">
+      <div class="style"><h3>New York Style</h3><p>Thin, foldable and crisp on the bottom. The classic.</p></div>
+      <div class="style"><h3>Sicilian</h3><p>Thick, square and airy, with a golden crust.</p></div>
+      <div class="style"><h3>Chicago Deep Dish</h3><p>Tall crust, loaded with cheese and topped with chunky sauce.</p></div>
+      <div class="style"><h3>Stuffed</h3><p>Cheese and toppings sealed between two layers of dough.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+  <div class="wrap">
+    <h2>Menu</h2>
+    <p class="sub">Call 484-320-8211 to place an order.</p>
+    <div class="menu-grid">
+      <div class="card">
+        <h3>Pizza</h3>
+        <div class="item"><div>Plain Pie<small>Small / Large</small></div><span class="price">$12.99 / $16.99</span></div>
+        <div class="item"><div>Upside Down Pizza<small>Cheese first, plum tomato sauce, olive oil, oregano</small></div><span class="price">$18.99</span></div>
+        <div class="item"><div>NY Tomato Pie<small>Plum tomato sauce, parmesan</small></div><span class="price">$16.99</span></div>
+        <div class="item"><div>Sicilian<small>Square, thick crust</small></div><span class="price">$19.99</span></div>
+        <div class="item"><div>Chicago Deep Dish</div><span class="price">$22.99</span></div>
+        <div class="item"><div>Extra Toppings<small>Each</small></div><span class="price">$2.00</span></div>
+      </div>
+      <div class="card">
+        <h3>From the Grill</h3>
+        <div class="item"><div>Cheesesteak<small>Fried onions on request</small></div><span class="price">$11.99</span></div>
+        <div class="item"><div>Chicken Cheesesteak</div><span class="price">$11.99</span></div>
+        <div class="item"><div>Cheeseburger Deluxe<small>Lettuce, tomato, fries</small></div><span class="price">$12.49</span></div>
+        <div class="item"><div>Italian Hoagie<small>Ham, salami, capicola, provolone</small></div><span class="price">$10.99</span></div>
+      </div>
+      <div class="card">
+        <h3>Sides &amp; More</h3>
+        <div class="item"><div>Wings<small>10 pc, choice of sauce</small></div><span class="price">$13.99</span></div>
+        <div class="item"><div>Cheese Fries</div><span class="price">$5.99</span></div>
+        <div class="item"><div>Mozzarella Sticks</div><span class="price">$7.99</span></div>
+        <div class="item"><div>Garden Salad</div><span class="price">$7.49</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order">
+  <div class="wrap">
+    <h2>Hungry? Order Direct.</h2>
+    <p>Call the shop and your order goes straight to the kitchen. Ready for pickup in about 20 minutes.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+14843208211">Call 484-320-8211</a>
+      <a class="btn ghost" href="https://slicelife.com/restaurants/pa/malvern/19355/great-valley-grill-pizza/menu">Order Online</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <h2>Hours &amp; Location</h2>
+    <p class="sub">79 Lancaster Ave, Malvern, PA 19355</p>
+    <div class="visit-grid">
+      <div class="contact">
+        <table class="hours">
+          <tr><td>Monday</td><td>11 AM – 9 PM</td></tr>
+          <tr><td>Tuesday</td><td>11 AM – 9 PM</td></tr>
+          <tr><td>Wednesday</td><td>11 AM – 9 PM</td></tr>
+          <tr><td>Thursday</td><td>11 AM – 9 PM</td></tr>
+          <tr><td>Friday</td><td>11 AM – 10 PM</td></tr>
+          <tr><td>Saturday</td><td>11 AM – 10 PM</td></tr>
+          <tr><td>Sunday</td><td>11 AM – 9 PM</td></tr>
+        </table>
+        <p style="margin-top:24px"><a class="btn" href="tel:+14843208211">Call 484-320-8211</a></p>
+      </div>
+      <iframe class="map" loading="lazy" title="Map to Great Valley Grill &amp; Pizza"
+        src="https://www.google.com/maps?q=79+Lancaster+Ave,+Malvern,+PA+19355&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Great Valley Grill &amp; Pizza · Malvern, PA</footer>
+</body>
+</html>
